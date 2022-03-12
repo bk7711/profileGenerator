@@ -1,4 +1,4 @@
-module.exports = employees => {
+module.exports = employeeProfiles => {
     let data = "";
     for( let i = 0; i < employees.length; i++){
         if("manager" in employees[i]){
