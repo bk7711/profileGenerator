@@ -108,9 +108,14 @@ const askQuestions = () => {
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 askQuestions()
-.then(render(employees))
-.then(renderMain => {
-    fs.writeFile()
+.then(render(employees, => {
+    
+}))
+    fs.writeFile('./team.html', renderMain, )
+   if(!fs.existsOutput(dir)){
+        fs.mkdirOutput(dir);
+        fs
+   }
 })
 
 // After you have your html, you're now ready to create an HTML file using the HTML
