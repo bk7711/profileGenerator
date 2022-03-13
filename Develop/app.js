@@ -98,7 +98,7 @@ const askQuestions = () => {
         if(response.nextEmployee){
             return askQuestions()
         }else{
-            return console.log(employees);
+            return (employees);
         }
     });
     })
@@ -107,17 +107,22 @@ const askQuestions = () => {
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
-askQuestions()
-.then(render(employees, => {
+const generateFile = () => {
+    askQuestions()
+    .then(render( => {
+        console.log(Process.argv);
+    }) )
     
-}))
-    fs.writeFile('./team.html', renderMain, )
-   if(!fs.existsOutput(dir)){
-        fs.mkdirOutput(dir);
-        fs
-   }
-})
-
+    // .then(fs.writeFileSync('./team.html', data, err => {
+    //     if(err) throw err;
+    //     console.log ('html complete')
+    
+    //     if(!fs.existsOutput(dir)){
+        
+    // }
+        
+    } 
+   generateFile()
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.
